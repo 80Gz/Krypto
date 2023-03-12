@@ -15,6 +15,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    word-spacing: 10px;
 }
 nav ul {
     flex: 1;
