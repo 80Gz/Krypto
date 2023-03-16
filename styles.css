@@ -11,11 +11,38 @@
     position: relative;
     width: 100%;
 }
-nav {
+div {
+    display: block;
+}
+span {
+    display: none;
+    width: 40px;
+    height: 40px;
+    height: 2px;
+    background-color: black;
+    transition: all 300ms ease-in-out;
+    transform-origin: 8.6px 1.7px;
+}
+span {
+    margin-bottom: 6px;
+    margin-right: 0.7rem;
+}
+nav.one {
+    position: relative;
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: space-between;
-    word-spacing: 10px;
+    padding-top: 0rem;
+    width: 100%;
+    top: 0;
+}
+.header-background {
+    background-color: rgb(244, 244, 244);
+}
+.ul {
+    display: flex;
+    text-align: center;
+    padding: 1.5rem;
 }
 nav ul {
     flex: 1;
@@ -24,14 +51,25 @@ nav ul {
 nav ul li {
     display: inline-block;
     list-style: none;
+    padding: 0 20px;
+    cursor: pointer;
+}
+.header-h1 {
+    font-size: 1.8rem;
+}
+.header-text {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 10px 45px;
 }
 button {
     background-color: black;
     color: whitesmoke;
     padding: 3px;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 0.3rem;
     padding: 10px;
+    border: none;
 }
 button:hover {
     background-color: whitesmoke;
@@ -49,52 +87,106 @@ button:hover {
     background: black;
     color: white;
 }
-.header-container {
-    background-color: #eeeee4;
-    margin-top: 40px;
+aside{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.header-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
 }
 header {
     text-align: center;
-    padding: 60px;
+    padding: 10px;
 }
 img {
-    max-width: 60%;
-    max-height: 60%;
     margin-top: 30px;
+    overflow-clip-margin: content-box;
+    overflow: clip;
 }
 p {
-    margin-bottom: 10px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
-h1 {
+h2 {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-block-start: 0.83em;
+    margin-block-start: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
     text-align: center;
 }
-.section1 {
+h3 {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+section h3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center !important;
+}
+.section1, .section2 {
     display: flex;
     align-items: center;
-    margin: 50px;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 4rem;
 }
-.portfolio {
-    width: 50%;
-    margin-left: 70px;
+.section11 {
+    font-size: 1.7rem;
+    flex: 0.5;
+    text-align: left;
+}
+.section11 h3, .section21 h3 {
+    font-size: 1.7rem;
+}
+.section11 p, .section21 p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.portfolio, .amico {
+    flex: 0.4;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+.section2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.section21 {
+    flex: 0.48;
+    margin-right: 0px;
+    margin-left: 3rem;
+}
+.amico {
+    flex: 0.6;
 }
 b {
     font-size: 20px;
     text-transform: capitalize;
 }
-.button-wrapper1 {
-    display: inline-block;
-    vertical-align: top;
-}
-.amico {
-    width: 100%;
-    height: 100%;
-    margin-right: 0px;
-}
-.section2 {
-    display: flex;
-    flex-direction: row-reverse;
-    margin: 50px;
-}
+
 .usp {
     font-size: 30px;
     margin: 40px 30px;
@@ -104,20 +196,27 @@ b {
     display: flex;
     background-color: black;
     color: darkgray;
-    margin-top: 50px;
-    padding:  50px;
+    padding:  20px;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: nowrap;
 }
 .footer-button {
     background-color: white;
     color: black;
-    
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 30px;
 }
 .footer-button:hover {
     background-color: wheat;
     color: black;
+}
+.footer-flex {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    justify-content: space-around;
 }
 ul li {
     list-style: none;
@@ -126,6 +225,9 @@ ul li {
 ul li a {
     color: darkgray;
 }
+.footer-krypto {
+    margin-left: -50px;
+}
 .footer-col a {
     list-style: none;
     text-decoration: none;
@@ -133,7 +235,136 @@ ul li a {
 h3 {
     margin-bottom: 10px;
 }
+.header__menu {
+    visibility: hidden;
+    background: white;
+    padding: 1rem;
+    border-radius: 5px;
+    position: absolute;
+    width: calc(100% - 5rem);
+    left: 50%;
+    transform: translate(-50%);
+    top: 5rem;
+    z-index: 6;
+}
+.header__menu a {
+    color: black;
+    padding: 0.626rem;
+    display: block;
+    text-align: center;
+    font-weight: 500;
+}
+a, a:visited, a:hover{
+    text-decoration: none;
+}
+.open > span:first-child {
+    transform: rotate(45deg) !important;
+}
+.open > span:nth-child(2) {
+    opacity: 0 !important;
+}
+.open > span:last-child {
+    transform: rotate(-45deg) !important;
+}
+body.noscroll {
+    overflow: hidden !important;
+}
+.fade-out {
+    animation: fade-out 200ms ease-out forwards;
+    animation-duration: 200ms;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-name: fade-out;
+}
+.has-fade {
+    visibility: hidden;
+}
+@keyframes fade-in {
+    from{
+        visibility: hidden;
+        opacity: 0;
+    }
+    1%{
+        visibility: visible;
+        opacity: 1;
+    }
+    to{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+.fade-in{
+    animation: fade-in 200ms ease-in-out fowards;
+}
+@keyframes fade-out {
+    from {
+        visibility: visible;
+        opacity: 1;
+    }
+    99% {
+        visibility: visible;
+        opacity: 0;
+    }
+    to {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+.fade-out{
+    animation: fade-out 200ms ease-in-out forwards;
+}
+.overlay {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, black, transparent);
+    visibility: hidden;
+}
+.nav.one {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    width: 100%;
+    top: 0;
+}
+.transparent {
+    transition: all300ms ease-in-out;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+    transition-property: all;
+}
+.colored {
+    background-color: rgb(246, 208, 159) !important;
+}
+@media only screen and (min-width: 768px) {
+    .header__menu, .overlay {
+        display: none !important;
+    }
+}
 @media only screen and (max-width: 767px) {
+    .ul, .nav-button {
+        display: none;
+    }
+    span {
+        display: block;
+    }
+    .open > span:not(:last-child) {
+        margin-bottom: 5px;
+    }
+    .header__menu {
+        visibility: visible;
+    }
     .footer {
         font-size: 10px;
         padding: 15px;
@@ -144,15 +375,22 @@ h3 {
         width: 50px;
     }
     .footer-col h2 {
-        font-size: 13px;
+        font-size: 15px;
     }
     .section1 {
         display: grid;
         text-align: center;
     }
     .section2 {
-        display: grid;
+        display: flex;
+        flex-direction: column-reverse;
         text-align: center;
+    }
+    .section21 {
+        margin-left: 0;
+    }
+    .section21 h3 {
+        padding: 20px;
     }
     .portfolio {
         height: 100%;
@@ -162,5 +400,45 @@ h3 {
     }
     nav h1 {
         font-size: 16px;
+    }
+    .header-button {
+        display: none;
+    }
+    .section1-button {
+    text-align: center;
+    }
+    .section2-button {
+    text-align: center;
+}
+@media only screen and (max-width: 510px)  {
+    
+    }
+    .header-container {
+        margin-top: -10px;
+    }
+    .hide-text {
+        display: none;
+    }
+    footer .footer ul {
+        display: none;
+    }
+    footer .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-bottom: 1rem;
+    }
+
+    .footer-krypto {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    img {
+        display: flex;
+        width: 70%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
     }
 }
